@@ -119,9 +119,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # settings.py
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static'),
-]
+
 
 
 
