@@ -26,9 +26,18 @@ Cargo is a robust and user-friendly platform designed to streamline the process 
 
 Clone the repository:
 ```
-git clone https://github.com/habert-kungu/cargo.co.git
+git clone https://github.com/habert-kungu/cargo.git
 ```
-Make sure you have Django installed with you package manager
+Go to cargo directory
+```
+cd cargo
+```
+## How to run since it is being developed run it by 
+```
+python manage.py runserver
+```
+!! Make sure you have Django installed with you package manager
+
 Certainly! Below is the installation guide for Django 
 
 
@@ -125,11 +134,3 @@ Certainly! Below is the installation guide for Django
 
 These are general steps, and you might encounter specific issues or requirements depending on your system configuration. Always refer to the [official Django documentation](https://docs.djangoproject.com/en/stable/intro/install/) for the latest installation instructions and best practices.
 
-
-
-
-
-## How to run since it is being developed run it by 
-```
-python manage.py runserver
-```
