@@ -150,6 +150,7 @@ h6 {
 
 .navbar li {
   position: relative;
+  margin: 10px;
 }
 
 .navbar a,
@@ -377,16 +378,17 @@ h6 {
 
 /*--------------------------------------------------------------
 # Hero Section
---------------------------------------------------------------*/
+--------------------------------------------------------------*/ 
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background: linear-gradient(to right, #ee0979, #ff6a00, #ee0979);
 }
 
 #hero .container {
   padding-top: 72px;
 }
+
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -394,6 +396,21 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #ee0979;
+  }
+
+  50% {
+    color: #ff6a00;
+  }
+
+  100% {
+    color: #ee0979;
+  }
 }
 
 #hero h2 {
@@ -418,7 +435,6 @@ h6 {
 
 #hero .btn-get-started:hover {
   background: #209dd8;
-  padding-bottom: 20px;
 }
 
 #hero .btn-watch-video {
@@ -443,8 +459,35 @@ h6 {
   color: #47b2e4;
 }
 
+
 #hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both,
+    slidein 3s linear 1s infinite alternate,
+    logo-bounce 4s ease-in-out infinite;
+}
+
+@keyframes logo-bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-100px);
+  }
 }
 
 @media (max-width: 991px) {
@@ -454,7 +497,7 @@ h6 {
   }
 
   #hero .animated {
-    animation: none;
+    animation: 5s up-down infinite linear;
   }
 
   #hero .hero-img {
@@ -494,15 +537,7 @@ h6 {
   }
 }
 
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
 
-  100% {
-    transform: translateY(-10px);
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -565,17 +600,37 @@ section {
   text-align: center;
 }
 
+.clients[data-animated="true"] {
+  overflow: hidden;
+}
+
+
 .clients img {
   max-width: 45%;
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
   filter: grayscale(100);
+  animation: fadeInUp 1s ease-in-out;
 }
+
+
 
 .clients img:hover {
   filter: none;
   transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 768px) {

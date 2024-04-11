@@ -1,10 +1,4 @@
-/**
-* Template Name: Arsha
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -75,6 +69,15 @@
       behavior: 'smooth'
     })
   }
+
+  const clients = document.querySelectorAll('.clients');
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+  function addAnimation() {
+    clients.forEach(client => {
+      client.setAttribute('data-animated',true)
+    })
 
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
@@ -256,4 +259,4 @@
     });
   });
 
-})()
+  }})
