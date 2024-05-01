@@ -22,23 +22,4 @@
     <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
 </form>
 
-<script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var email = document.getElementById("emailInput").value;
-        var password = document.getElementById("passwordInput").value;
 
-        // Client-side validation
-        if (!email.trim()) {
-            alert("Please enter your email");
-            return;
-        }
-
-        if (!password.trim()) {
-            alert("Please enter your password");
-            return;
-        }
-
-        this.submit();
-    });
-</script>

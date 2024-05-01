@@ -43,53 +43,5 @@
         <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
     </form>
 
-    <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            var firstname = document.getElementById("firstnameInput").value;
-            var lastname = document.getElementById("lastnameInput").value;
-            var email = document.getElementById("emailInput").value;
-            var password = document.getElementById("passwordInput").value;
-            var confirmPassword = document.getElementById("confirmPasswordInput").value;
-
-            // Perform client-side validation
-            if (firstname.trim() === "") {
-                alert("Please enter your Firstname");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            if (lastname.trim() === "") {
-                alert("Please enter your Lastname");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            if (email.trim() === "") {
-                alert("Please enter your Email");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            // You can add more validation rules for email format, password strength, etc.
-
-            if (password.trim() === "") {
-                alert("Please enter your Password");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            if (confirmPassword.trim() === "") {
-                alert("Please confirm your Password");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            if (password !== confirmPassword) {
-                alert("Passwords do not match");
-                event.preventDefault(); // Prevent form submission
-                return;
-            }
-        });
-    </script>
 </body>
 </html>
