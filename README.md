@@ -7,7 +7,13 @@
 ![cargo](https://github.com/habert-kungu/cargo/assets/147383053/c6381c4d-fe56-48e4-a312-c881542281ff)
 
 
+#### Login Route
 
+![Screenshot from 2024-05-01 07-22-20](https://github.com/habert-kungu/cargo/assets/147383053/1314dd01-2f45-4f4f-a7ee-0210b04258e6)
+
+#### Register Route
+
+![Screenshot from 2024-05-01 07-22-10](https://github.com/habert-kungu/cargo/assets/147383053/2f2a51b3-5cee-41e8-be7b-1e4da6cd434b)
 
 ## Overview
 
