@@ -38,6 +38,11 @@ Go to cargo directory
 ```
 cd cargo
 ```
+Install the requirements
+```bash
+pip install -r requirements.txt
+```
+
 ## How to run since it is being developed run it by 
 ```
 python manage.py runserver
