@@ -75,7 +75,7 @@ WSGI_APPLICATION = "cargo.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "mysql.connector.django",
+        "ENGINE": "django.db.backends.mysql",
         "NAME": "cargo",
         "USER": "habert",
         "PASSWORD": "hello",
