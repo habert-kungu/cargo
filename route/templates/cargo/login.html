@@ -1,25 +1,31 @@
 {% load static %}
-<title>Login | Cargo</title>
-<link rel="shortcut icon" type="cargo icon" href="{%static 'cargo/img/logo.png'%}">
-<form id="loginForm" class="form" method="post" action="{% url 'login' %}">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo | Login</title>
+    <link rel="shortcut icon" type="cargo icon" href="{% static 'cargo/img/logo.png' %}">
     <link rel="stylesheet" href="{% static 'cargo/css/auth.css' %}">
-    <p class="title">Login</p>
-    <p class="message">Welcome Back!</p>
-    {% csrf_token %}
-    <label>
-        <input id="emailInput" name="email" required="" placeholder="" type="email" class="input">
-        <span>Email</span>
-    </label>
+  </head>
+  <body>
+    <form id="loginForm" class="form" method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <p class="title">Login</p>
+      <p class="message">Welcome Back!</p>
+      {% if message %}
+      <div class= "flex">{{ message }}</div>
+      {% endif %}
+      <label>
+        <input id="username" name="username" placeholder="Username" type="text" class="input">
+      </label>
+      <label>
+        <input id="passwordInput" name="password" required="" placeholder="Password" type="password" class="input">
+      </label>
+      <button id="loginButton" class="submit">Login</button>
 
-    <label>
-        <input id="passwordInput" name="password" required="" placeholder="" type="password" class="input">
-        <span>Password</span>
-    </label>
-
-    <button id="loginButton" class="submit">Login</button>
-    <p class="signin">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
-    
-    <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
-</form>
-
-
+      <p class="signin">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+      <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
+    </form>
+  </body>
+</html>

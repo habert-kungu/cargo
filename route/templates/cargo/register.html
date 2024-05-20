@@ -1,47 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | Cargo</title>
- <link rel="shortcut icon" type="cargo icon" href="{%static 'cargo/img/logo.png'%}">
-   <link rel="stylesheet" href="{% static '/cargo/css/auth.css' %}">
-</head>
-<body>
+    <title>Cargo | Register</title>
+    <link rel="shortcut icon" type="cargo icon" href="{% static 'cargo/img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'cargo/css/auth.css' %}">
+  </head>
+  <body>
     <form id="registrationForm" class="form" method="post">
-        {% csrf_token %}
-        <p class="title">Register</p>
-        <p class="message">Signup now and get full access to our app.</p>
-        <div class="flex">
-            <label>
-                <input id="firstnameInput" name="Firstname" required="" type="text" class="input">
-                <span>Firstname</span>
-            </label>
+      {% csrf_token %}
+      <p class="title">Register</p>
+      <p class="message">Signup now and get full access to our app.</p>
 
-            <label>
-                <input id="lastnameInput" name="Lastname" required="" type="text" class="input">
-                <span>Lastname</span>
-            </label>
-        </div>
-        
-        <label>
-            <input id="emailInput" name="Email" required="" placeholder="" type="email" class="input">
-            <span>Email</span>
-        </label> 
-        
-        <label>
-            <input id="passwordInput" name="Password" required="" placeholder="" type="password" class="input">
-            <span>Password</span>
-        </label>
-        <label>
-            <input id="confirmPasswordInput" name="Confirmation" required="" placeholder="" type="password" class="input">
-            <span>Confirm password</span>
-        </label>
-        <button id="registerButton" class="submit">Register</button>
+      {% if message %}
+      <div class= "flex">{{ message }}</div>
+      {% endif %}
+
+      <label>
+        <input id="Username" name="username" placeholder="Username" type="text" class="input">
+      </label>
+      <label>
+        <input id="emailInput" name="email" placeholder="Email" type="email" class="input">
+      </label>
+      <label>
+        <input id="passwordInput" name="password1" placeholder="Password" type="password" class="input">
+      </label>
+      <label>
+        <input id="confirmPasswordInput" name="password2" required="" placeholder="Confirm Password" type="password" class="input">
+      </label>
+      <button id="registerButton" class="submit">Register</button>
       <p class="signin">Already have an account? <a href="{% url 'login' %}">Login</a></p>
-        <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
+      <p class="signin">Not Ready? <a href="{% url 'index' %}">Home</a></p>
     </form>
-
-</body>
+  </body>
 </html>
+
