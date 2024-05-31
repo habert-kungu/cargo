@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-m($2f=+mfqjsd$q(9%-!8_!j5-!&ruh2ywwxq4n--z1t7o(m@l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -77,7 +77,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "cargo",
-        "USER": "habert",
+        "USER": "root",
         "PASSWORD": "hello",
         "HOST": "127.0.0.1",  # or the IP address of your MySQL server
         "PORT": "3306",  # MySQL default port
